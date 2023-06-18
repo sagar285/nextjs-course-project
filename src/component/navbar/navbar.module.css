@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link{
+    margin: 20px 60px;
+    padding: 2;
+}
+.link a{
+    text-decoration: none;
+    color: gray;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 15px;
+}
+.link a:hover{
+    color: white;
+}
