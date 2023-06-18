@@ -10,8 +10,11 @@ export async function GET(){
     }
     const {value} =token;
     try {
-        const user= verify(value,"dkfjkdfjdsjfjhfsdhjfdsfjdsjfdj");
-         return new NextResponse(JSON.stringify({msg:"authorized user"},{status:201}))
+        if(value){
+            const user= verify(value,"dkfjkdfjdsjfjhfsdhjfdsfjdsjfdj");
+            return new NextResponse(JSON.stringify({msg:"authorized user"},{status:201}))
+        }
+    
     } catch (error) {
         throw new Error(error);
     }
